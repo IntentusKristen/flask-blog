@@ -16,6 +16,8 @@
             crossorigin="anonymous"
         />
 
+        <link lang='sass' rel="stylesheet" href="./static/styles/kristen.css">
+
         <title>{% block title %}Kristen{% endblock %}</title>
     </head>
 
@@ -43,5 +45,13 @@
             type="text/javascript"
             src="{{ url_for('static', filename= 'index.js')}}"
         ></script>
+
+        <!-- adding my picture to my page-->
+        <div class="profile">
+            <div id="profile-picture" class="profile-picture">
+                <img src="./static/img/Kristen_Zhang.jpg"/>
+            </div>
+            <h1>{{ title }}</h1>
+        </div>
     </body>
 </html>
