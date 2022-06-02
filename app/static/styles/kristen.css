@@ -51,22 +51,23 @@ body {
 
 .profile {
     background-color: #A9D0F5 !important;
-    text-align: center;
+    text-align: left;
     height: 320px;
     margin-bottom: 50px;
 }
 
 .profile h1 {
-        font-size: 50px;
+        font-size: 30px;
         font-weight: 700;
+        margin-top: -10px;
         color: white;
 }
 
 .profile img {
         border-radius: 50%;
-        max-width: 20%;
+        max-width: 15%;
         max-height: auto;
-        margin-left: auto;
+        margin-left: -15px;
         margin-right: auto;
         display: block;        
         padding: 20px;
