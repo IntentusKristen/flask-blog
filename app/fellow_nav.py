@@ -12,6 +12,6 @@ def kristen():
 def helen():
     return "<p>Helen<p>"
 
-@fellow_nav.route('/Catherine')
+@fellow_nav.route('/catherine')
 def catherine():
     return "<p>Catherine<p>"
