@@ -14,6 +14,7 @@ body {
 p {
     font-family: "Lucidia Console", monospace;
     text-align: justify;
+    margin-left: 300px;
 }
 
 .nav-bar {
@@ -59,22 +60,32 @@ p {
     text-align: left;
     height: 320px;
     margin-bottom: 50px;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 .profile h1 {
         font-size: 30px;
         font-weight: 700;
         margin-top: -10px;
+        margin-left: 275px;
         text-align: justify;
         color: white;
 }
 
+.profile h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: -40px;
+    margin-left: 275px;
+    text-align: justify;
+    color: white;
+}
+
 .profile img {
         border-radius: 50%;
-        max-width: 15%;
+        max-width: 20%;
         max-height: auto;
-        margin-left: 0px;
+        margin-left: -5px;
         margin-right: auto;
         display: block;     
         float: left;   
