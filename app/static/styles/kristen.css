@@ -1,4 +1,4 @@
-p, h1, h2, h3, h4, h5, h6, button {
+h1, h2, h3, h4, h5, h6, button {
     font-family: "Lucidia Console", monospace;
 }
 
@@ -9,6 +9,11 @@ body {
     overflow-x: hidden;
     font-family: "Lucidia Console", monospace;
     margin: 0px;
+}
+
+p {
+    font-family: "Lucidia Console", monospace;
+    text-align: justify;
 }
 
 .nav-bar {
@@ -54,12 +59,14 @@ body {
     text-align: left;
     height: 320px;
     margin-bottom: 50px;
+    margin-left: 25px;
 }
 
 .profile h1 {
         font-size: 30px;
         font-weight: 700;
         margin-top: -10px;
+        text-align: justify;
         color: white;
 }
 
@@ -67,9 +74,10 @@ body {
         border-radius: 50%;
         max-width: 15%;
         max-height: auto;
-        margin-left: -15px;
+        margin-left: 0px;
         margin-right: auto;
-        display: block;        
+        display: block;     
+        float: left;   
         padding: 20px;
         object-fit: cover;
 }
