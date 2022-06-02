@@ -6,7 +6,7 @@ fellow_nav = Blueprint('fellow_nav', __name__)
 
 @fellow_nav.route('/kristen')
 def kristen():
-    return "<p>Kristen<p>"
+    return render_template('kristen_page.html', title="Kristen Zhang", url=os.getenv("URL"))
 
 @fellow_nav.route('/helen')
 def helen():
