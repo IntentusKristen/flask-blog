@@ -7,5 +7,5 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+def home():
+    return render_template('home.html', title="MLH Fellow Orientation Hack", url=os.getenv("URL"))
