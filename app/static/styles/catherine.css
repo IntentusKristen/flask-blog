@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+/* text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #c4a7e7;
+}
+
+p {
+	color: #e0def4;
+}
+
+/* body */
 body {
 	background-color: #232136;
 	background-size: cover;
@@ -10,6 +25,28 @@ body {
 	color: white;
 }
 
+/* banner */
+
+.banner {
+	padding: 20px 0px 50px 0px;
+	height: 150px;
+	background-color: #1d539f;
+}
+
+.banner .logo {
+	max-width: 180px;
+	max-height: 60px;
+	width: auto;
+	height: auto;
+}
+
+.banner .title {
+	color: white;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+/* nav */
 .nav-bar {
 	width: 100%;
 	display: inline-block;
@@ -47,38 +84,43 @@ body {
 	padding-right: 0px;
 }
 
-.banner {
-	padding: 20px 0px 50px 0px;
-	height: 150px;
-	background-color: #1d539f;
-}
-
-.banner .logo {
-	max-width: 180px;
-	max-height: 60px;
-	width: auto;
-	height: auto;
-}
-
-.banner .title {
-	color: white;
-	font-size: 50px;
-	font-weight: 700;
+/* profile */
+.profile-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .profile {
 	font-family: "Space Mono", monospace;
+	width: 70%;
+	padding: 25px;
+
+	display: grid;
+	grid-template-columns: auto auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #c4a7e7;
+#profile-picture img,
+.profile-picture img {
+	border-radius: 100%;
 }
 
-p {
-	color: #e0def4;
+#profile-picture,
+.profile-picture {
+	float: left;
+}
+
+.content-wrapper {
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	margin-left: 25px;
+}
+.content {
+	flex-grow: 1;
+}
+
+.subheading {
+	word-wrap: break-word;
+	font-size: 32px;
 }
