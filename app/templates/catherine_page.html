@@ -49,7 +49,7 @@
 	<body>
 		<header class="nav-bar">
 			<div class="nav-content">
-				<a href="/">
+				<a href="/" aria-label="Home Page">
 					<div class="nav-logo">
 						<img src="../static/img/logo.svg" alt="Major League Hacking Logo" />
 					</div>
@@ -78,10 +78,10 @@
 			</div>
 		</nav>
 		<div class="profile-container">
-			<div class="profile">
+			<div class="profile grid">
 				<div id="profile-picture" class="profile-picture">
 					<img
-						src="../static/img/catherine.jpg"
+						src="../static/img/catherine/catherine.jpg"
 						alt="Catherine's profile picture"
 					/>
 				</div>
@@ -146,7 +146,7 @@
 										<span>June 2021 - August 2021</span>
 									</div>
 									<div class="timeline-marker"></div>
-									<div class="timeline-content">
+									<div class="timeline-content" id='last'>
 										<h3 class="timeline-title">Accenture Summer Intern</h3>
 										<p>
 											I completed a 6-week survey course focused on introducing
@@ -163,12 +163,59 @@
 
 						<section class="hobbies">
 							<h1>Hobbies</h1>
+							<div class="grid">
+								<div>
+									<div class="img games" style="background-image: url('../static/img/catherine/gaming.jpg');">
+									</div>
+								</div>
+								<div><div class="img choir" style="background-image: url('../static/img/catherine/choir.jpg');">
+								</div>
+								</div>
+								<div>
+									<div class="img coding" style="background-image: url('../static/img/catherine/Coding.jpg');">
+									</div>
+							</div>
+							</div>
+						</section>
+
+						<section class="Education">
+							<h1>Education</h1>
+							<ul class="timeline">
+								<li class="timeline-item">
+									<div class="timeline-info">
+										<span>June 2022 - Present</span>
+									</div>
+									<div class="timeline-marker"></div>
+									<div class="timeline-content">
+										<h3 class="timeline-title">
+											Fresno State Smittcamp Honors Student
+										</h3>
+										<p>
+											I will be attending Fresno State as a computer science major with a full scholarship in the upcoming school year.
+										</p>
+									</div>
+								</li>
+								<li class="timeline-item">
+									<div class="timeline-info">
+										<span>August 2018 - June 2022</span>
+									</div>
+									<div class="timeline-marker"></div>
+									<div class="timeline-content" id='last'>
+										<h3 class="timeline-title">Sierra Pacific Highschool</h3>
+										<p>
+											I recently graduated highschool with a 4.0 and above.
+										</p>
+									</div>
+								</li>
+							</ul>
 						</section>
 						<section class="map">
 							<h1>Places I've been to:</h1>
+							<p>Hover over plots to view locations.</p>
 							<div class="mapcontainer">
 								<div class="map">
-									<span>Alternative content for the map</span>
+									<span>Javascript is required to view the map</span>
+									<span>I've been to Kansas City, Philippines, Colorado, Canada, and California</span>
 								</div>
 							</div>
 						</section>
