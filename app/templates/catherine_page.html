@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
@@ -27,16 +27,31 @@
 			rel="stylesheet"
 		/>
 
-		<link lang="sass" rel="stylesheet" href="./static/styles/catherine.css" />
+		<link rel="stylesheet" href="../static/styles/catherine.css" />
 		<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
-		<title>{{ title }}</title>
+		
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+            charset="utf-8"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"
+            charset="utf-8"
+        ></script>
+		
+		<script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+		<script src="https://cdn.githubraw.com/neveldo/mapael-maps/86def5fb/world/world_countries.js" charset="utf-8"></script>
+        <title>{{ title }}</title>
+
+		<script src="../static/catherine_page.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<header class="nav-bar">
 			<div class="nav-content">
 				<a href="/">
 					<div class="nav-logo">
-						<img src="./static/img/logo.svg" />
+						<img src="../static/img/logo.svg" alt="Major League Hacking Logo" />
 					</div>
 				</a>
 			</div>
@@ -72,12 +87,13 @@
 				</div>
 				<div class="content-wrapper">
 					<article class="content">
-                        <section class="about-me">
-                            <h1>{{ title }}</h1>
+						<section class="about-me">
+							<h1>{{ title }}</h1>
 							<ul>
 								<li>
-									Hello, I'm Catherine. I'm an 18-year-old prospective computer-science
-									major and currently self-taught programmer on the web.
+									Hello, I'm Catherine. I'm an 18-year-old prospective
+									computer-science major and currently self-taught programmer on
+									the web.
 								</li>
 								<li>I mainly work with ReactJS, Typescript, and Python.</li>
 								<li>In my free time, I like to play video-games and sing :)</li>
@@ -85,42 +101,76 @@
 						</section>
 						<section class="work-experiences">
 							<h1>Work Experiences</h1>
-                            <ul class="timeline">
-                                <li class="timeline-item">
-                                    <div class="timeline-info">
-                                        <span>May 2022 - Present</span>
-                                    </div>
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h3 class="timeline-title">Major League Hacking - Production Engineer Fellow</h3>
-                                        <p>The MLH Fellowship is a 12-week internship alternative for aspiring technologists. Fellows on the Production Engineering track experience what it's like to work in Production / Site Reliability Engineering and DevOps.</p>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <div class="timeline-info">
-                                        <span>February 2022 - Present</span>
-                                    </div>
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h3 class="timeline-title"> 1,000 Dreams Fund - Intern</h3>
-                                        <p>I contribute through  both research for outreach and contact building, as well as well as match, pair, and facilitate MentorHER mentorship sessions.</p>
-                                        <h3 class="timeline-title"> 1,000 Dreams Fund - Student Advisory Board</h3>
-                                        <p>I contributed through marketing and was apart of a board that facilitated the scholarship winners for 1000 Dream Fund's student scholarships.</p>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <div class="timeline-info">
-                                        <span>June 2021 - August 2021</span>
-                                    </div>
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h3 class="timeline-title">Accenture Summer Intern</h3>
-                                        <p>I completed a 6-week survey course focused on introducing the professional culture of global business and topics, skills, and issues that are defining the future of work. I collaborated with 7 interns to create a group project which included a final presentation for Accenture and non-profit guests.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+							<ul class="timeline">
+								<li class="timeline-item">
+									<div class="timeline-info">
+										<span>May 2022 - Present</span>
+									</div>
+									<div class="timeline-marker"></div>
+									<div class="timeline-content">
+										<h3 class="timeline-title">
+											Major League Hacking - Production Engineer Fellow
+										</h3>
+										<p>
+											The MLH Fellowship is a 12-week internship alternative for
+											aspiring technologists. Fellows on the Production
+											Engineering track experience what it's like to work in
+											Production / Site Reliability Engineering and DevOps.
+										</p>
+									</div>
+								</li>
+								<li class="timeline-item">
+									<div class="timeline-info">
+										<span>February 2022 - Present</span>
+									</div>
+									<div class="timeline-marker"></div>
+									<div class="timeline-content">
+										<h3 class="timeline-title">1,000 Dreams Fund - Intern</h3>
+										<p>
+											I contribute through both research for outreach and
+											contact building, as well as well as match, pair, and
+											facilitate MentorHER mentorship sessions.
+										</p>
+										<h3 class="timeline-title">
+											1,000 Dreams Fund - Student Advisory Board
+										</h3>
+										<p>
+											I contributed through marketing and was apart of a board
+											that facilitated the scholarship winners for 1000 Dream
+											Fund's student scholarships.
+										</p>
+									</div>
+								</li>
+								<li class="timeline-item">
+									<div class="timeline-info">
+										<span>June 2021 - August 2021</span>
+									</div>
+									<div class="timeline-marker"></div>
+									<div class="timeline-content">
+										<h3 class="timeline-title">Accenture Summer Intern</h3>
+										<p>
+											I completed a 6-week survey course focused on introducing
+											the professional culture of global business and topics,
+											skills, and issues that are defining the future of work. I
+											collaborated with 7 interns to create a group project
+											which included a final presentation for Accenture and
+											non-profit guests.
+										</p>
+									</div>
+								</li>
+							</ul>
+						</section>
+
+						<section class="hobbies">
+							<h1>Hobbies</h1>
+						</section>
+						<section class="map">
+							<h1>Places I've been to:</h1>
+							<div class="mapcontainer">
+								<div class="map">
+									<span>Alternative content for the map</span>
+								</div>
+							</div>
 						</section>
 					</article>
 				</div>

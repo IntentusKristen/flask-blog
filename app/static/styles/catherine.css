@@ -119,15 +119,12 @@ body {
 #profile-picture,
 .profile-picture {
 	float: left;
+	width: 100%;
 }
 
-.content-wrapper {
+.content {
 	margin-left: 25px;
 }
-.content {
-	flex-grow: 1;
-}
-
 /* about me */
 .about-me li {
 	font-size: 1rem;
@@ -254,3 +251,38 @@ body {
 }
 
 /* TIMELINE END */
+
+/* map */
+circle.plot {
+	fill: #c4a7e7;
+}
+.mapael .map {
+	position: relative;
+}
+.mapael .mapTooltip {
+	position: absolute;
+	z-index: 1000;
+	max-width: 200px;
+	display: none;
+}
+
+/* mobile responsive */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 850px) {
+	.profile {
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+	.content {
+		margin-left: 0;
+	}
+
+	.mapael .mapTooltip {
+		position: absolute;
+		z-index: 1000;
+		max-width: 200px;
+		display: none;
+	}
+}
