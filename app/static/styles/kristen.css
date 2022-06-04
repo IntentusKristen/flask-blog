@@ -75,7 +75,7 @@ p {
 .profile h2 {
     font-size: 20px;
     font-weight: 600;
-    margin-top: 200px;
+    margin-top: 0;
     margin-left: 275px;
     text-align:left;
     color: white;

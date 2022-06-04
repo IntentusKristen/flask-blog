@@ -9,7 +9,9 @@ fellow_nav = Blueprint('fellow_nav', __name__)
 def kristen():
     return render_template('kristen_page.html', title="22.SUM.22 Fellow: Kristen Zhang", url=os.getenv("URL"), 
     title_location="Summer Research Intern @ Western University", date="May 2022 - Present",
-    title_location2="Production Engineering Fellow @ MLH", date2 = "May 2022 - Present")
+    title_location2="Production Engineering Fellow @ MLH", date2 = "May 2022 - Present",
+    school="Sir Frederick Banting S.S", school_date="September 2016 - June 2020",
+    school2="Western University", school_date2="September 2020 - Present")
 
 @fellow_nav.route('/helen')
 def helen():
