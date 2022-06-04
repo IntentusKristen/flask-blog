@@ -352,6 +352,14 @@ circle.plot {
 		max-width: 200px;
 		display: none;
 	}
+
+	.hobbies .grid {
+		display: flex;
+
+		flex-direction: column;
+
+		overflow: hidden;
+	}
 }
 
 @media only screen and (max-width: 1475px) {
