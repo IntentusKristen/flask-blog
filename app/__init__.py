@@ -10,4 +10,9 @@ app.register_blueprint(fellow_nav, url_prefix='/')
 
 @app.route('/')
 def home():
-    return render_template('home.html', title="MLH Fellow Orientation Hack", url=os.getenv("URL"))
+    """ Landing Page """
+    nav = [{'name': 'Home', 'url': '/'},
+           {'name': 'Kristen', 'url': '/kristen'},
+           {'name': 'Helen', 'url': '/helen'},
+           {'name': 'Catherine', 'url': '/catherine'}]
+    return render_template('home.html', nav=nav, title="MLH Fellow Orientation Hack", url=os.getenv("URL"))
