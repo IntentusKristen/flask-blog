@@ -2,10 +2,11 @@
     <h2>Work Experience</h2>
         <p>
             {% for work in work_info %}
-            <b>{{work.name}} @ {{work.location}}: {{work.start_date}} - {{work.end_date}}</b><br>                
-            {% if work.desc %}
-            - {{work.desc}}<br>
-            {% endif %}
+
+            <b>{{work.name}} @ {{work.location}}: {{work.start_date}} - {{work.end_date}}</b><br>
+            {% if work.desc != '' %}  
+            <p><i> - {{work.desc}}</i><br></p><br>
+            {% endif %}         
             {% endfor %}
             </p>
 {% endblock%}

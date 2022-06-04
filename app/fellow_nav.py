@@ -25,19 +25,21 @@ def kristen():
             'name': 'Sir Frederick Banting S.S',
             'location': 'London, ON',
             'start_date': 'September 2016',
-            'end_date': 'June 2020'
+            'end_date': 'June 2020',
+            'desc' : ''
         },{
             'name': 'Western University',
             'location': 'London, ON',
             'start_date': 'September 2020',
-            'end_date': 'Present'
+            'end_date': 'Present',
+            'desc' : ''
         }]
 
     return render_template('kristen_page.html', title="22.SUM.22 Fellow: Kristen Zhang", url=os.getenv("URL"), work_info=work_info, education_info=education_info)
 
 @fellow_nav.route('/helen')
 def helen():
-    return "<p>Helen<p>"
+    return "<p>Helen Xia<p>"
 
 @fellow_nav.route('/catherine')
 def catherine():
