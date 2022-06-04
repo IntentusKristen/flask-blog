@@ -81,11 +81,21 @@ p {
     color: white;
 }
 
+.profile h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-left: 25px;
+    text-align:left;
+    color: white;
+}
+
 .profile img {
         border-radius: 50%;
         max-width: 20%;
         max-height: auto;
         margin-left: -5px;
+        margin-top: 20px;
         margin-right: auto;
         display: block;     
         float: left;   
