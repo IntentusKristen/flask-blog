@@ -11,7 +11,8 @@ def kristen():
             'name': 'Summer Research Intern',
             'location': 'Western University',
             'start_date': 'May 2022',
-            'end_date': 'Present'
+            'end_date': 'Present',
+            'desc': 'my desc'
         },{
             'name': 'Production Engineering Fellow',
             'location': 'MLH',
