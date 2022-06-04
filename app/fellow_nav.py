@@ -11,24 +11,28 @@ def kristen():
             'name': 'Summer Research Intern',
             'location': 'Western University',
             'start_date': 'May 2022',
-            'end_date': 'Present'
+            'end_date': 'Present',
+            'desc' : ''
         },{
             'name': 'Production Engineering Fellow',
             'location': 'MLH',
             'start_date': 'May 2022',
-            'end_date': 'Present'
+            'end_date': 'Present',
+            'desc' : ''
         }]
 
     education_info = [{
             'name': 'Sir Frederick Banting S.S',
             'location': 'London, ON',
             'start_date': 'September 2016',
-            'end_date': 'June 2020'
+            'end_date': 'June 2020',
+            'desc' : ''
         },{
             'name': 'Western University',
             'location': 'London, ON',
             'start_date': 'September 2020',
-            'end_date': 'Present'
+            'end_date': 'Present',
+            'desc' : ''
         }]
 
     return render_template('kristen_page.html', title="22.SUM.22 Fellow: Kristen Zhang", url=os.getenv("URL"), work_info=work_info, education_info=education_info)
