@@ -28,8 +28,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
         <link lang='sass' rel="stylesheet" href="./static/styles/helen.css">
+        <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+
+        <!-- map -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+            charset="utf-8"
+        ></script>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"
+            charset="utf-8"
+        ></script>
+		
+		<script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+		<script src="https://cdn.githubraw.com/neveldo/mapael-maps/86def5fb/world/world_countries.js" charset="utf-8"></script>
+
 
         <title>{% block title %}Helen{% endblock %}</title>
+
+        <script src="../static/helen.js" type="text/javascript"></script>
 
     </head>
 
@@ -55,6 +75,7 @@
 				<img src="./static/img/helen.jpg" />
 			</div>
 			<h1 class="mytitle">{{ title }}</h1>
+            <h3> <i>mlh production engineer fellow 22.sum.22</i></h3>
 		</div>
 
         <!-- using jinja education and work template -->
@@ -67,15 +88,39 @@
                     🐍 - My favourite language to code in is Python!
                 </p>
             </div> <br>
+            
+            <!-- education info -->
             <div class="child">
                 {% include 'education_info.html' %}
             </div> <br>
+
+            <!-- work info -->
             <div class="child">
                 {% include 'work_info.html' %}
             </div> <br>
             <div class="child">
                 <a class="nav-item nav-link" id="home" href="/helen/hobbies" >Hobbies</a>
+            </div> <br>
+
+            <!-- map -->
+            <div class="child">
+                <div class="container">
+                    <section class="map">
+                        <h3><u>Places I have visited</u></h3>
+                        <p>Hover over plots to view locations.</p>
+                        <div class="mapcontainer">
+                            <div class="map">
+                                <span>Javascript is required to view the map</span>
+                                <span>I've been to China, Canada, California and Florida</span>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                
+
             </div>
+
             
         </div>
         
