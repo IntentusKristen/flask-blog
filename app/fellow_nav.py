@@ -15,4 +15,8 @@ def helen():
 
 @fellow_nav.route('/catherine')
 def catherine():
-    return render_template('catherine_page.html', title="22.SUM.22 Fellow: Catherine Laserna", url=os.getenv("URL"))
+    nav = [{'name': 'Home', 'url': '/'},
+           {'name': 'Kristen', 'url': '/kristen'},
+           {'name': 'Helen', 'url': '/helen'},
+           {'name': 'Catherine', 'url': '/catherine'}]
+    return render_template('catherine_page.html', nav=nav, title="22.SUM.22 Fellow: Catherine Laserna", url=os.getenv("URL"))
