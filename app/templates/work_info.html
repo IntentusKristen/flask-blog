@@ -3,11 +3,11 @@
         <p>
             {% for work in work_info %}
             <div>
-                <b>{{work.name}} @ {{work.location}}: {{work.start_date}} - {{work.end_date}}</b>
+                <h5><b>{{work.name}} @ {{work.location}}: {{work.start_date}} - {{work.end_date}}</b></h5>
                 {% if work.desc != '' %}  
                 <p><i> - {{work.desc}}</i></p>
-                {% endif %}         
-            </div>
+                {% endif %} 
+            </div>     
             {% endfor %}
-            </p>
+        </p>
 {% endblock%}

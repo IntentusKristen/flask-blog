@@ -68,18 +68,28 @@ def helen():
     education_info = [{
             'name': 'University of Waterloo',
             'location': 'Waterloo, ON',
-            'start_date': 'September 2020',
+            'start_date': 'Sept 2020',
             'end_date': 'Present',
             'desc' : 'Bachelor of Computer Science Co-op'
         },{
             'name': 'Iroquois Ridge High School',
             'location': 'Oakville, ON',
-            'start_date': 'September 2016',
+            'start_date': 'Sept 2016',
             'end_date': 'June 2020',
             'desc' : 'Debate Club Marketing Executive, Interact Club Marketing Executive'
         }]
+    
 
     return render_template('helen_page.html', nav=nav, title="Helen Xia", url=os.getenv("URL"), work_info=work_info, education_info=education_info)
+
+@fellow_nav.route('/helen/hobbies')
+def helenhobbies():
+    hobby_info = [{
+        'name' : 'Chocolate Milk',
+        'img' : './static/img/hobbietest.jpeg',
+        'desc' : 'I like drinking chocolate milk'
+    }]
+    return render_template('helen_hobbies.html', nav=nav, title="Helen Xia", url=os.getenv("URL"),hobbies=hobby_info)
 
 @fellow_nav.route('/catherine')
 def catherine():

@@ -36,6 +36,14 @@ body {
     
 
 }
+.hobbies-container {
+    background-color: #f4c76d;
+    border: 4px solid #efb024;
+    padding: 2em;
+    box-shadow: 8px 8px #7c7c7c;
+    border-radius: 16px;
+    color: #000000;
+}
 
 .nav-bar {
     width: 100%;

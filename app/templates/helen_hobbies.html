@@ -48,38 +48,7 @@
         <!-- using jinja nav template -->
         {% include 'nav.html' %}
 
-
-        <!-- add profile picture -->
-        <div class="profile">
-			<div id="profile-picture" class="profile-picture">
-				<img src="./static/img/helen.jpg" />
-			</div>
-			<h1 class="mytitle">{{ title }}</h1>
-		</div>
-
-        <!-- using jinja education and work template -->
-        <div class="parent">
-            <div class="child">
-                <h3><u>About me</u></h3>
-                <p> 👋🏼 - Hi, I am Helen! <br>
-                    💻 - I am a 3rd year computer science student currently studying at the University of Waterloo!<br>
-                    🎨 - Outside of school, I like to <a href="https://www.instagram.com/hxcolor">draw</a> and take <a href="https://www.instagram.com/hxlens">pictures</a>. <br>
-                    🐍 - My favourite language to code in is Python!
-                </p>
-            </div> <br>
-            <div class="child">
-                {% include 'education_info.html' %}
-            </div> <br>
-            <div class="child">
-                {% include 'work_info.html' %}
-            </div> <br>
-            <div class="child">
-                <a class="nav-item nav-link" id="home" href="/helen/hobbies" >Hobbies</a>
-            </div>
-            
-        </div>
-        
-
-        </body>
+        <!-- include hobbies template -->
+        {% include 'hobbies.html' %}
+    </body>
 </html>
-    
