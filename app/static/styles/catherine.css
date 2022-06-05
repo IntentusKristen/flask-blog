@@ -138,6 +138,56 @@ body {
 	font-size: 1rem;
 }
 
+/* work info */
+#timeline h2 {
+	display: none;
+}
+
+#timeline i {
+	font-style: normal;
+}
+
+#timeline p {
+	margin: 0;
+}
+
+#timeline b {
+	font-weight: 100;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+	font-size: 1.75rem;
+	color: #c4a7e7;
+}
+
+#timeline div b:before {
+	display: block;
+
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #9ccfd8;
+}
+
+#timeline div:first-of-type b:before {
+	content: "May 2022 - Present";
+}
+
+#timeline div:nth-of-type(2) b:before {
+	content: "April 2022 - Present";
+}
+
+#timeline div:nth-of-type(3) b:before {
+	content: "January 2022 - May 2022";
+}
+
+#timeline div:nth-of-type(4) b:before {
+	content: "June 2021 - August 2021";
+}
+
 /* hobbies */
 .hobbies .grid {
 	display: grid;
@@ -210,7 +260,11 @@ body {
 	line-height: inherit;
 }
 /*----- TIMELINE ITEM -----*/
-.timeline-item {
+#timeline {
+	position: relative;
+}
+.timeline-item,
+#timeline div {
 	padding-left: 40px;
 	position: relative;
 }
@@ -235,7 +289,8 @@ body {
 	left: 0;
 	width: 15px;
 }
-.timeline-marker:before {
+.timeline-marker:before,
+#timeline div:before {
 	background: #9ccfd8;
 	border: 3px solid transparent;
 	border-radius: 100%;
@@ -248,7 +303,8 @@ body {
 	width: 15px;
 	transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
-.timeline-marker:after {
+.timeline-marker:after,
+#timeline div:after {
 	content: "";
 	width: 3px;
 	background: #ccd5db;
@@ -258,22 +314,24 @@ body {
 	bottom: 0;
 	left: 6px;
 }
-.timeline-item:last-child .timeline-marker:after {
+#timeline div:last-of-type:after {
 	content: none;
 }
-.timeline-item:not(.period):hover .timeline-marker:before {
+
+#timeline div:not(.period):hover:before {
 	background: transparent;
 	border: 3px solid #9ccfd8;
 }
+
 /*----- TIMELINE CONTENT -----*/
-.timeline-content {
-	padding-bottom: 40px;
+#timeline div {
+	padding-bottom: 10px;
 }
-.timeline-content p:last-child {
+#timeline p:last-child {
 	margin-bottom: 0;
 }
 
-#last {
+#timeline div:last-of-type {
 	padding-bottom: 0;
 }
 /*----- TIMELINE PERIOD -----*/
@@ -304,7 +362,8 @@ body {
 .period .timeline-content {
 	padding: 40px 0 70px;
 }
-.period .timeline-title {
+.period .timeline-title,
+#timeline p:first-of-type {
 	margin: 0;
 }
 
