@@ -151,7 +151,7 @@ body {
 	margin: 0;
 }
 
-#timeline b {
+#timeline.work b {
 	font-weight: 100;
 	margin-bottom: 0.5rem;
 	margin-top: 0;
@@ -159,7 +159,7 @@ body {
 	color: #c4a7e7;
 }
 
-#timeline div b:before {
+#timeline.work div b:before {
 	display: block;
 
 	font-size: 0.75rem;
@@ -172,22 +172,33 @@ body {
 	color: #9ccfd8;
 }
 
-#timeline div:first-of-type b:before {
+#timeline.work div:first-of-type b:before {
 	content: "May 2022 - Present";
 }
 
-#timeline div:nth-of-type(2) b:before {
+#timeline.work div:nth-of-type(2) b:before {
 	content: "April 2022 - Present";
 }
 
-#timeline div:nth-of-type(3) b:before {
+#timeline.work div:nth-of-type(3) b:before {
 	content: "January 2022 - May 2022";
 }
 
-#timeline div:nth-of-type(4) b:before {
+#timeline.work div:nth-of-type(4) b:before {
 	content: "June 2021 - August 2021";
 }
 
+#timeline.education {
+	display: block;
+
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
 /* hobbies */
 .hobbies .grid {
 	display: grid;

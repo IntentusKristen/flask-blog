@@ -69,8 +69,20 @@ def catherine():
             'desc': "I completed a 6-week survey course focused on introducing the professional culture of global business and topics, skills, and issues that are defining the future of work. I collaborated with 7 interns to create a group project which included a final presentation for Accenture and non-profit guests."
         }]
 
+    education_info = [{
+            'name': 'Fresno State University',
+            'location': 'Fresno, CA',
+            'start_date': 'August 2022',
+            'end_date': 'Present',
+        },{
+            'name': 'Sierra Pacific Highschool',
+            'location': 'Hanford, CA',
+            'start_date': 'August 2018',
+            'end_date': 'June 2022',
+        }]
+
     nav = [{'name': 'Home', 'url': '/'},
            {'name': 'Kristen', 'url': '/kristen'},
            {'name': 'Helen', 'url': '/helen'},
            {'name': 'Catherine', 'url': '/catherine'}]
-    return render_template('catherine_page.html', nav=nav, work_info=work_info, title="22.SUM.22 Fellow: Catherine Laserna", url=os.getenv("URL"))
+    return render_template('catherine_page.html', nav=nav, work_info=work_info, education_info=education_info, title="22.SUM.22 Fellow: Catherine Laserna", url=os.getenv("URL"))
