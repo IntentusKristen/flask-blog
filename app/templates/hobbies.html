@@ -1,0 +1,16 @@
+<div class="hobbies-container">
+	{% for hobby in hobbies %}
+	<div class="hobby">
+		<div class="image">
+			<img src="{{ hobby.img }}" alt="{{ hobby.name }}" />
+		</div>
+		<div class="text">
+			<h3>{{ hobby.name }}</h3>
+			<!-- Description: Optional* -->
+			{% if hobby.desc %}
+			<p>{{ hobby.desc }}</p>
+			{% else %} {% endif %}
+		</div>
+	</div>
+	{% endfor %}
+</div>
