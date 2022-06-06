@@ -41,24 +41,7 @@
             </div>
         </header>
 
-        <!-- creating the navigation bar and routing it to each fellow's webpage-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbar"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbar">
-                <a class="nav-item nav-link" id="home" href="/">Home</a>
-                <a class="nav-item nav-link" id="kristen" href="/kristen">Kristen</a>
-                <a class="nav-item nav-link" id="helen" href="/helen">Helen</a>
-                <a class="nav-item nav-link" id="catherine" href="/catherine">Catherine</a>
-            </div>
-        </nav>
+        {% include 'nav.html' %}
 
         <!-- script to use your own javascript stored in static-->
         <script
