@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+/* general styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #c4a7e7;
+}
+
+p {
+	color: #e0def4;
+}
+
+ul,
+li {
+	padding: 0;
+	margin: 0;
+
+	list-style-type: none;
+}
+
+section {
+	margin-top: 25px;
+}
+
+h2.subheading {
+	color: #ccd5db;
+}
+
+a:hover {
+	text-decoration: none;
+}
+a h2:hover {
+	text-decoration: none;
+	background-color: #ccd5db;
+	color: #232136;
+}
+
+/* body */
+body {
+	background-color: #232136;
+	background-size: cover;
+	width: auto;
+	overflow-x: hidden;
+	font-family: "Roboto", serif;
+	margin: 0px;
+	color: white;
+}
+
+/* banner */
+
+.banner {
+	padding: 20px 0px 50px 0px;
+	height: 150px;
+	background-color: #1d539f;
+}
+
+.banner .logo {
+	max-width: 180px;
+	max-height: 60px;
+	width: auto;
+	height: auto;
+}
+
+.banner .title {
+	color: white;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+/* nav */
+.nav-bar {
+	width: 100%;
+	display: inline-block;
+	font-family: "Roboto", serif;
+	font-weight: 700 !important;
+	padding-top: 10px;
+}
+
+.nav-content .logo-touch-target {
+	display: inline-flex;
+	height: 60%;
+	width: 350px;
+}
+
+.nav-content .nav-logo {
+	height: 60px;
+	margin: auto;
+}
+
+.nav-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-logo img {
+	width: 200px;
+}
+
+.nav-content nav {
+	display: block;
+	width: 100%;
+	text-align: right;
+	padding-top: 0px;
+	padding-right: 0px;
+}
+
+/* profile */
+.profile-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile {
+	font-family: "Space Mono", monospace;
+	width: 70%;
+	padding: 25px;
+
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+
+.grid > * {
+	min-width: 0px;
+}
+#profile-picture img,
+.profile-picture img {
+	border-radius: 100%;
+}
+
+#profile-picture,
+.profile-picture {
+	float: left;
+	width: 100%;
+}
+
+.content-wrapper {
+	margin-left: 25px;
+}
+
+/* about me */
+.about-me li {
+	font-size: 1rem;
+}
+
+/* work info */
+#timeline h2 {
+	display: none;
+}
+
+#timeline i {
+	font-style: normal;
+}
+
+#timeline p {
+	margin: 0;
+}
+
+#timeline.work b {
+	font-weight: 100;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+	font-size: 1.75rem;
+	color: #c4a7e7;
+}
+
+#timeline.work div b:before {
+	display: block;
+
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #9ccfd8;
+}
+
+#timeline.work div:first-of-type b:before {
+	content: "May 2022 - Present";
+}
+
+#timeline.work div:nth-of-type(2) b:before {
+	content: "April 2022 - Present";
+}
+
+#timeline.work div:nth-of-type(3) b:before {
+	content: "January 2022 - May 2022";
+}
+
+#timeline.work div:nth-of-type(4) b:before {
+	content: "June 2021 - August 2021";
+}
+
+#timeline.education {
+	display: block;
+
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+/* hobbies */
+.hobbies .grid {
+	width: 100%;
+
+	display: flex;
+}
+.hobbies .grid .hobbies-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	gap: 15px;
+
+	width: max-content;
+}
+
+.hobbies .grid div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+}
+
+.hobbies .grid .image img {
+	width: 400px;
+	height: 400px;
+
+	padding: 10px 20px;
+	background-color: #44415a;
+
+	object-fit: cover;
+	background-size: cover;
+	background-position: center;
+
+	position: relative;
+}
+
+.hobbies .text {
+	width: 400px;
+	background-color: #44415a;
+
+	padding: 0 20px;
+	height: 100%;
+}
+
+.hobby {
+	height: 100%;
+}
+.hobbies a {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.hobbies h2 {
+	text-align: center;
+	width: max-content;
+	padding-right: 25px;
+	position: relative;
+}
+
+.hobbies i {
+	position: absolute;
+	top: 50%;
+	right: 6px;
+}
+
+/*================================== TIMELINE ==================================*/
+/*-- GENERAL STYLES ------------------------------*/
+.timeline {
+	line-height: 1.4em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.timeline h1,
+.timeline h2,
+.timeline h3,
+.timeline h4,
+.timeline h5,
+.timeline h6 {
+	line-height: inherit;
+}
+/*----- TIMELINE ITEM -----*/
+#timeline {
+	position: relative;
+}
+.timeline-item,
+#timeline div {
+	padding-left: 40px;
+	position: relative;
+}
+.timeline-item:last-child {
+	padding-bottom: 0;
+}
+/*----- TIMELINE INFO -----*/
+.timeline-info {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0 0 0.5em 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #9ccfd8;
+}
+/*----- TIMELINE MARKER -----*/
+.timeline-marker {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 15px;
+}
+.timeline-marker:before,
+#timeline div:before {
+	background: #9ccfd8;
+	border: 3px solid transparent;
+	border-radius: 100%;
+	content: "";
+	display: block;
+	height: 15px;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 15px;
+	transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.timeline-marker:after,
+#timeline div:after {
+	content: "";
+	width: 3px;
+	background: #ccd5db;
+	display: block;
+	position: absolute;
+	top: 24px;
+	bottom: 0;
+	left: 6px;
+}
+#timeline div:last-of-type:after {
+	content: none;
+}
+
+#timeline div:not(.period):hover:before {
+	background: transparent;
+	border: 3px solid #9ccfd8;
+}
+
+/*----- TIMELINE CONTENT -----*/
+#timeline div {
+	padding-bottom: 10px;
+}
+#timeline p:last-child {
+	margin-bottom: 0;
+}
+
+#timeline div:last-of-type {
+	padding-bottom: 0;
+}
+/*----- TIMELINE PERIOD -----*/
+.period {
+	padding: 0;
+}
+.period .timeline-info {
+	display: none;
+}
+.period .timeline-marker:before {
+	background: transparent;
+	content: "";
+	width: 15px;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	top: 0;
+	bottom: 30px;
+	position: absolute;
+	border-top: 3px solid #ccd5db;
+	border-bottom: 3px solid #ccd5db;
+}
+.period .timeline-marker:after {
+	content: "";
+	height: 32px;
+	top: auto;
+}
+.period .timeline-content {
+	padding: 40px 0 70px;
+}
+.period .timeline-title,
+#timeline p:first-of-type {
+	margin: 0;
+}
+
+.marker-outline .timeline-marker:before {
+	background: transparent;
+	border-color: #9ccfd8;
+}
+.marker-outline .timeline-item:hover .timeline-marker:before {
+	background: #9ccfd8;
+}
+
+/* TIMELINE END */
+
+/* map */
+circle.plot {
+	fill: #c4a7e7;
+}
+.mapael .map {
+	position: relative;
+}
+.mapael .mapTooltip {
+	position: absolute;
+	z-index: 1000;
+	max-width: 200px;
+	display: none;
+}
+
+/* mobile responsive */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 991px) {
+	.profile {
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+		width: 90%;
+	}
+	.content-wrapper {
+		margin-left: 0;
+	}
+
+	.mapael .mapTooltip {
+		position: absolute;
+		z-index: 1000;
+		max-width: 200px;
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1475px) {
+	.profile {
+		grid-template-columns: 2fr 5fr;
+	}
+	.hobbies .grid .hobbies-container {
+		display: flex;
+
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+}

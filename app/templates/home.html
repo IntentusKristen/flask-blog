@@ -16,6 +16,7 @@
 			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 			crossorigin="anonymous"
 		/>
+		<link href="https://css.gg/code-slash.css" rel="stylesheet" />
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -47,10 +48,41 @@
 		{% include 'nav.html' %}
 
 		<div class="profile">
-			<div id="profile-picture" class="profile-picture">
-				<img src="./static/img/logo.jpg" />
-			</div>
-			<h1>{{ title }}</h1>
+			<section class="content">
+				<h1>{{ title }}</h1>
+				<p>
+					During our first week of the MLH Fellowship program on the Production
+					Engineering group, we were tasked with creating a portfolio site. We
+					made this portfolio site with the template given to us and our tasks.
+				</p>
+				<h3>Our Learning Experience</h3>
+				<p>
+					This project has been a wonderful opportunity to explore flask and web
+					development. In addition, none of us has ever worked with Jinja so
+					this has been a new experience for all of us. Outside of our given
+					resources, we were able to fiddle with CSS and Javascript to spice up
+					our profiles/create working world maps. Most notably, we've been doing
+					a really good job familiarizing ourselves with Git lately and the Git
+					version control system. We've been pushing features into our own
+					branches and creating pull requests for merging into main. Overall,
+					it's been a fulfilling experience.
+				</p>
+				<h3>Our Challenges</h3>
+				<p>
+					One of our biggest challenges had been using Jinja because it was
+					something we weren't familiar with at all. For most of our problems we
+					had to look things up on Stack Overflow or work together to resolve
+					problems together that came up. Despite this challenge we were able to
+					pull through and resolve our conflicts. We learned a lot of new things
+					about Jinja through the project
+				</p>
+
+				<footer>
+					<a href="https://github.com/cjlaserna/flask-blog" class="btn blue"
+						>View our Github Page <i class="gg-code-slash"></i
+					></a>
+				</footer>
+			</section>
 		</div>
 	</body>
 </html>

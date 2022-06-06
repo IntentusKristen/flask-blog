@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta property="og:title" content="Catherine's Portfolio" />
+		<meta property="og:description" content="Catherine's Portfolio" />
+		<meta property="og:url" content="{{ url }}" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link href='https://css.gg/link.css' rel='stylesheet'>
+
+		<link rel="stylesheet" href="../static/styles/catherine.css" />
+		<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+		
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+            charset="utf-8"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"
+            charset="utf-8"
+        ></script>
+		
+		<script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+		<script src="https://cdn.githubraw.com/neveldo/mapael-maps/86def5fb/world/world_countries.js" charset="utf-8"></script>
+        <title>{{ title }}</title>
+
+		<script src="../static/catherine_page.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header class="nav-bar">
+			<div class="nav-content">
+				<a href="/" aria-label="Home Page">
+					<div class="nav-logo">
+						<img src="../static/img/logo.svg" alt="Major League Hacking Logo" />
+					</div>
+				</a>
+			</div>
+		</header>
+
+		{% include 'nav.html' %}
+		
+		<div class="profile-container">
+			<div class="profile grid">
+				<div id="profile-picture" class="profile-picture">
+					<img
+						src="../static/img/catherine/catherine.jpg"
+						alt="Catherine's profile picture"
+					/>
+				</div>
+				<div class="content-wrapper">
+					<article class="content">
+						<section class="about-me">
+							<h1>{{ title }}</h1>
+							<p>
+								Hello, I'm Catherine. I'm an 18-year-old prospective computer-science major and currently self-taught programmer on the web.
+								I mainly work with ReactJS, Typescript, and Python.
+								In my free time, I like to play video-games and sing :)
+							</p>
+						</section>
+						
+						<section class="Education">
+							<h1>Education</h1>
+							<div id="timeline" class="education">
+								{% include 'education_info.html' %}
+							</div>
+						</section>
+
+						<section class="work-experiences">
+							<h1>Work Experiences</h1>
+							<div id="timeline" class="work">
+								{% include 'work_info.html' %}
+							</div>
+						</section>
+						<section class="map">
+							<h1>Places I've been to:</h1>
+							<p>Hover over plots to view locations.</p>
+							<div class="mapcontainer">
+								<div class="map">
+									<span>Javascript is required to view the map</span>
+									<span>I've been to Kansas City, Philippines, Colorado, Canada, and California</span>
+								</div>
+							</div>
+						</section>
+
+						<section class="hobbies">
+							<a href='/catherine/hobbies'><h2 class="subheading">Lastly, view my hobbies here <i class="gg-link"></i></h2> 
+							</a>
+
+						</section>
+
+					</article>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

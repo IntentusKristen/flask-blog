@@ -1,4 +1,4 @@
-h1, h2, h3, h4, h5, h6, button {
+p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Lucidia Console", monospace;
 }
 
@@ -85,9 +85,16 @@ p {
     font-size: 20px;
     font-weight: 600;
     margin-top: 0;
-    margin-left: 25px;
     text-align:left;
     color: white;
+}
+
+.profile h4 {
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 0;
+    text-align:left;
+    color: black;
 }
 
 .profile img {
@@ -125,4 +132,104 @@ p {
     color: white;
     font-size: 50px;
     font-weight: 700;
+}
+
+* map */
+circle.plot {
+	fill: #c4a7e7;
+}
+.mapael .map {
+	position: relative;
+    margin-top: -300px;
+}
+.mapael .map p {
+    margin-left: 10px;
+}
+.mapael .mapTooltip {
+	position: absolute;
+	z-index: 1000;
+	max-width: 200px;
+	display: none;
+}
+
+/* mobile responsive */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 991px) {
+	.profile {
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+		width: 90%;
+	}
+	.content-wrapper {
+		margin-left: 0;
+	}
+
+	.mapael .mapTooltip {
+		position: absolute;
+		z-index: 1000;
+		max-width: 200px;
+		display: none;
+	}
+
+	.hobbies .grid {
+		display: flex;
+
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+}
+
+@media only screen and (max-width: 1475px) {
+	.profile {
+		grid-template-columns: 2fr 5fr;
+	}
+}
+
+/** hobbies css */
+.hobbies h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-left: 25px;
+    text-align:left;
+    color: white;
+}
+
+.hobbies p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 10px;
+    color: white;
+}
+
+.hobbies .grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+	gap: 10px;
+}
+
+.hobbies .grid div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+
+	border: solid 1px white;
+}
+
+.hobbies .grid .img {
+	width: 100%;
+	height: 300px;
+
+	object-fit: cover;
+	background-size: cover;
+	background-position: center;
+
+	position: relative;
 }
