@@ -485,4 +485,10 @@ circle.plot {
 
 .education b {
 	color: #e0def4;
+	word-break: break-word;
+	white-space: normal;
+}
+
+#timeline.work h3 {
+	display: none;
 }
