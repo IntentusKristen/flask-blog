@@ -4,7 +4,7 @@
             {% for education in education_info %}
             <h5> <b>{{education.name}} @ {{education.location}}: {{education.start_date}} - {{education.end_date}}</b> </h5>            
             {% if education.desc != '' %}  
-            <p><i> - {{education.desc}}</i></p>
+            <p><i>{{education.desc}}</i></p>
             {% endif %}     
             {% endfor %}
         </p> 

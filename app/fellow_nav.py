@@ -17,14 +17,12 @@ def kristen():
             'name': 'Summer Research Intern',
             'location': 'Western University',
             'start_date': 'May 2022',
-            'end_date': 'Present',
-            'desc': 'Developing recording GUI using python.'
+            'end_date': 'Present'
         },{
             'name': 'Production Engineering Fellow',
             'location': 'MLH',
             'start_date': 'May 2022',
-            'end_date': 'Present',
-            'desc': 'Creating a portfolio website for orientation hack!'
+            'end_date': 'Present'
         }]
 
     education_info = [{
