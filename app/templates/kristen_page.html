@@ -23,10 +23,21 @@
         <title>{% block title %}Kristen{% endblock %}</title>
 
         <!-- code for the javascript map -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js"></script>
-        <script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js"></script>
-        <script src="https://cdn.githubraw.com/neveldo/mapael-maps/86def5fb/world/world_countries.js" charset="utf-8"></script>
-        <script src="../static/kristen_map.js" type="text/javascript"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+            charset="utf-8"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"
+            charset="utf-8"
+        ></script>
+		
+		<script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js" charset="utf-8"></script>
+		<script src="https://cdn.githubraw.com/neveldo/mapael-maps/86def5fb/world/world_countries.js" charset="utf-8"></script>
+        <title>{{ title }}</title>
+
+		<script src="../static/kristen_map.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -63,17 +74,20 @@
             {% include 'work_info.html' %}
         </div>
         
-        <div class="child">
-            <h3>Countries I've Traveled To!</h3>
-            <section class="map">
-                <h1>Places I've been to:</h1>
-                <p>Hover over plots to view locations.</p>
-                <div class="mapcontainer">
-                    <div class="map">
-                        <span>Javascript is required to view the map</span>
-                        <span>I've been to Canada and China</span>
-                    </div>
-        </div>
+        <section class="map">
+            <div class="profile">
+                <h3>Places I've been to:</h3>
+                <h4>Hover over plots to view locations.</h4>
+            </div>
+            
+        
+            <div class="mapcontainer">
+                <div class="map">
+                    <span>Javascript is required to view the map</span>
+                    <span>I've been to London, Ontario in Canada, GuangXi and HuNan in China</span>
+                </div>
+            </div>
+        </section>
 
         <h3>
             <a id="hobbies" id='kristen_hobbies' href="/kristen/hobbies">Click Here To See My Hobbies!</a>

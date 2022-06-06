@@ -85,9 +85,16 @@ p {
     font-size: 20px;
     font-weight: 600;
     margin-top: 0;
-    margin-left: 25px;
     text-align:left;
     color: white;
+}
+
+.profile h4 {
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 0;
+    text-align:left;
+    color: black;
 }
 
 .profile img {
@@ -127,12 +134,16 @@ p {
     font-weight: 700;
 }
 
-/* map */
+* map */
 circle.plot {
 	fill: #c4a7e7;
 }
 .mapael .map {
 	position: relative;
+    margin-top: -300px;
+}
+.mapael .map p {
+    margin-left: 10px;
 }
 .mapael .mapTooltip {
 	position: absolute;
