@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- adding required meta tags-->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!-- adding style sheets from bootstrap -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            crossorigin="anonymous"
+        />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+        <link lang='sass' rel="stylesheet" href="../static/styles/helen.css">
+        <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
+
+
+        <title>{% block title %}Helen{% endblock %}</title>
+
+    </head>
+
+    <body>
+        <!-- adding the MLH logo to the webpage-->
+        <header class="nav-bar">
+            <div class="nav-content">
+                <a href="/">
+                    <div class="nav-logo">
+                        <img src="../static/img/logo.svg" />
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <!-- using jinja nav template -->
+        {% include 'nav.html' %}
+
+         <!-- add profile picture -->
+         <div class="profile">
+			<div id="profile-picture" class="profile-picture">
+				<img src="../static/img/helen.jpg" />
+			</div>
+			<h1 class="mytitle">{{ title }}</h1>
+            <h3> <i>mlh production engineer fellow 22.sum.22</i></h3>
+		</div>
+
+        <!-- include a back link -->
+        <div class="parent">
+            <a href="javascript:history.back()">
+            <button class="button button1">return to profile</button> 
+        </a>
+        </div>
+    
+        <!-- include hobbies template -->
+        <div class="hobbiestitle"> <h3><b><u>My Hobbies</u></b></h3></div>
+
+
+        <div class="row">
+            {% include 'hobbieshelentemp.html' %}
+        </div>
+        
+        
+    </body>
+</html>

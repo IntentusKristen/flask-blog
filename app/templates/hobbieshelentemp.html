@@ -1,0 +1,14 @@
+{% for hobby in hobbies %}
+<div class="column">
+ <div class="card">
+	<img src="{{ hobby.img }}" alt="{{ hobby.name }}" />
+    <div class="container">
+		<h3>{{ hobby.name }}</h3>
+        <!-- Description: Optional* -->
+        {% if hobby.desc %}
+        <p>{{ hobby.desc }}</p>
+        {% else %} {% endif %}
+	</div>
+</div>   
+</div>
+{% endfor %}
