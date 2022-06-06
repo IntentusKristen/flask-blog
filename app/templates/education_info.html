@@ -2,7 +2,9 @@
     <h2>Education</h2>
         <p>
             {% for education in education_info %}
-            <b>{{education.name}} @ {{education.location}}: {{education.start_date}} - {{education.end_date}}</b><br>                
+            <div>
+                <b>{{education.name}} @ {{education.location}}: {{education.start_date}} - {{education.end_date}}</b><br>                
+            </div>
             {% endfor %}
             </p>
 {% endblock%}
