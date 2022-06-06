@@ -22,6 +22,11 @@
 
         <title>{% block title %}Kristen{% endblock %}</title>
 
+        <!-- code for the javascript map -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/jquery.mapael.min.js"></script>
+        <script src="https://cdn.githubraw.com/neveldo/mapael-maps/86def5fb/world/world_countries.js" charset="utf-8"></script>
+        <script src="../static/kristen_map.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -36,24 +41,7 @@
             </div>
         </header>
 
-        <!-- creating the navigation bar and routing it to each fellow's webpage-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbar"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbar">
-                <a class="nav-item nav-link" id="home" href="/">Home</a>
-                <a class="nav-item nav-link" id="kristen" href="/kristen">Kristen</a>
-                <a class="nav-item nav-link" id="helen" href="/helen">Helen</a>
-                <a class="nav-item nav-link" id="catherine" href="/catherine">Catherine</a>
-            </div>
-        </nav>
+        {% include 'nav.html' %}
 
         <!-- script to use your own javascript stored in static-->
         <script
@@ -64,7 +52,7 @@
         <!-- adding my picture to my page and text to the webpage-->
         <div class="profile">
             <div id="profile-picture" class="profile-picture" alt="picture of me">
-                <img src="./static/img/Kristen_Zhang.jpg"/>
+                <img src="./static/img/kristen/Kristen_Zhang.jpg"/>
             </div>
             <h1>{{ title }}</h1>
             <p>Hello everyone! I live in a small city called London, located in Canada. <br>
@@ -73,8 +61,22 @@
             </p>
             {% include 'education_info.html' %}
             {% include 'work_info.html' %}
-
-            <h3>Countries I've Traveled To!</h3>
         </div>
+        
+        <div class="child">
+            <h3>Countries I've Traveled To!</h3>
+            <section class="map">
+                <h1>Places I've been to:</h1>
+                <p>Hover over plots to view locations.</p>
+                <div class="mapcontainer">
+                    <div class="map">
+                        <span>Javascript is required to view the map</span>
+                        <span>I've been to Canada and China</span>
+                    </div>
+        </div>
+
+        <h3>
+            <a id="hobbies" id='kristen_hobbies' href="/kristen/hobbies">Click Here To See My Hobbies!</a>
+        </h3>
     </body>
 </html>

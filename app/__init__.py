@@ -1,10 +1,11 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, make_response
 from dotenv import load_dotenv
 
 load_dotenv()
 app = Flask(__name__)
 from .fellow_nav import fellow_nav
+
 app.register_blueprint(fellow_nav, url_prefix='/')
 
 
@@ -16,3 +17,8 @@ def home():
            {'name': 'Helen', 'url': '/helen'},
            {'name': 'Catherine', 'url': '/catherine'}]
     return render_template('home.html', nav=nav, title="MLH Fellow Orientation Hack", url=os.getenv("URL"))
+
+
+@app.route('/kristen/hobbies')
+def kristen_hobbies():
+    return render_template('kristen_hobbies.html', title="My Hobbies", url=os.getenv("URL"))
