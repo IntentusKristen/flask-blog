@@ -25,33 +25,49 @@ $(function () {
 			defaultPlot: {
 				text: {
 					attrs: {
-						fill: "#E0DEF4",
+						fill: "white",
 					},
 					attrsHover: {
-						fill: "#E0DEF4",
+						fill: "white",
 					},
 				},
 			},
 		},
 		plots: {
-			china: {
-				latitude: 32.049999,
-				longitude: 118.766670,
+			hunan: {
+				latitude: 27.583584,
+				longitude: 111.699844,
+				tooltip: { content: "HuNan, China" },
+			},
+
+			guangxi: {
+				latitude: 23.787529,
+				longitude: 108.77496,
 				tooltip: { content: "GuangXi, China" },
 			},
+
 			ontario: {
-				latitude: 52.00401,
-				longitude: -91.754666,
+				latitude: 42.986897,
+				longitude: -81.246216,
 				tooltip: { content: "London, Ontario" },
 			},
 
 		},
 		// Links allow you to connect plots between them
 		links: {
-			chinaontario: {
+			guangxiontario: {
 				// ... Or with IDs of plotted points
 				factor: -0.6,
-				between: ["china", "ontario"],
+				between: ["guangxi", "hunan"],
+				attrs: {
+					"stroke-width": 2,
+				},
+			},
+
+			hunanontario: {
+				// ... Or with IDs of plotted points
+				factor: -0.6,
+				between: ["hunan", "ontario"],
 				attrs: {
 					"stroke-width": 2,
 				},
