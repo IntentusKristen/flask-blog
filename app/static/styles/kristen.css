@@ -126,3 +126,53 @@ p {
     font-size: 50px;
     font-weight: 700;
 }
+
+/* map */
+circle.plot {
+	fill: #c4a7e7;
+}
+.mapael .map {
+	position: relative;
+}
+.mapael .mapTooltip {
+	position: absolute;
+	z-index: 1000;
+	max-width: 200px;
+	display: none;
+}
+
+/* mobile responsive */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 991px) {
+	.profile {
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+		width: 90%;
+	}
+	.content-wrapper {
+		margin-left: 0;
+	}
+
+	.mapael .mapTooltip {
+		position: absolute;
+		z-index: 1000;
+		max-width: 200px;
+		display: none;
+	}
+
+	.hobbies .grid {
+		display: flex;
+
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+}
+
+@media only screen and (max-width: 1475px) {
+	.profile {
+		grid-template-columns: 2fr 5fr;
+	}
+}
