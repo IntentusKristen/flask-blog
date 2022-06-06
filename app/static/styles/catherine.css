@@ -29,6 +29,20 @@ li {
 section {
 	margin-top: 25px;
 }
+
+h2.subheading {
+	color: #ccd5db;
+}
+
+a:hover {
+	text-decoration: none;
+}
+a h2:hover {
+	text-decoration: none;
+	background-color: #ccd5db;
+	color: #232136;
+}
+
 /* body */
 body {
 	background-color: #232136;
@@ -199,12 +213,20 @@ body {
 	text-transform: uppercase;
 	white-space: nowrap;
 }
+
 /* hobbies */
 .hobbies .grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	width: 100%;
 
-	gap: 10px;
+	display: flex;
+}
+.hobbies .grid .hobbies-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	gap: 15px;
+
+	width: max-content;
 }
 
 .hobbies .grid div {
@@ -213,13 +235,14 @@ body {
 	align-items: center;
 
 	flex-direction: column;
-
-	border: solid 1px #c4a7e7;
 }
 
-.hobbies .grid .img {
-	width: 100%;
-	height: 200px;
+.hobbies .grid .image img {
+	width: 400px;
+	height: 400px;
+
+	padding: 10px 20px;
+	background-color: #44415a;
 
 	object-fit: cover;
 	background-size: cover;
@@ -228,29 +251,36 @@ body {
 	position: relative;
 }
 
-.hobbies .grid .img::before {
-	position: absolute;
-	content: " ";
+.hobbies .text {
+	width: 400px;
+	background-color: #44415a;
 
-	width: 100%;
+	padding: 0 20px;
 	height: 100%;
-	background-color: #232136;
-	opacity: 0.7;
 }
 
-.img.games:after {
-	position: absolute;
-	content: "Games";
+.hobby {
+	height: 100%;
+}
+.hobbies a {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+.hobbies h2 {
+	text-align: center;
+	width: max-content;
+	padding-right: 25px;
+	position: relative;
 }
 
-.img.choir::after {
+.hobbies i {
 	position: absolute;
-	content: "Choir";
-}
-
-.img.coding::after {
-	position: absolute;
-	content: "Hackathons";
+	top: 50%;
+	right: 6px;
 }
 
 /*================================== TIMELINE ==================================*/
@@ -422,18 +452,17 @@ circle.plot {
 		max-width: 200px;
 		display: none;
 	}
-
-	.hobbies .grid {
-		display: flex;
-
-		flex-direction: column;
-
-		overflow: hidden;
-	}
 }
 
 @media only screen and (max-width: 1475px) {
 	.profile {
 		grid-template-columns: 2fr 5fr;
+	}
+	.hobbies .grid .hobbies-container {
+		display: flex;
+
+		flex-direction: column;
+
+		overflow: hidden;
 	}
 }

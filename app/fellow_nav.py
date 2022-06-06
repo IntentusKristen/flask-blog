@@ -85,4 +85,4 @@ def catherine():
            {'name': 'Kristen', 'url': '/kristen'},
            {'name': 'Helen', 'url': '/helen'},
            {'name': 'Catherine', 'url': '/catherine'}]
-    return render_template('catherine_page.html', nav=nav, work_info=work_info, education_info=education_info, title="22.SUM.22 Fellow: Catherine Laserna", url=os.getenv("URL"))
+    return render_template('./catherine/catherine_page.html', nav=nav, work_info=work_info, education_info=education_info, title="22.SUM.22 Fellow: Catherine Laserna", url=os.getenv("URL"))
