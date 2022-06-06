@@ -5,10 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 from .fellow_nav import fellow_nav
-from .k_hobbies import k_hobbies
 
 app.register_blueprint(fellow_nav, url_prefix='/')
-app.register_blueprint(k_hobbies, url_prefix='/kristen/')
 
 
 @app.route('/')
