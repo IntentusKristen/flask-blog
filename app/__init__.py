@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, make_response
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -17,6 +17,12 @@ def home():
            {'name': 'Helen', 'url': '/helen'},
            {'name': 'Catherine', 'url': '/catherine'}]
     return render_template('home.html', nav=nav, title="MLH Fellow Orientation Hack", url=os.getenv("URL"))
+
+@app.route('/kristen.css')
+def css():
+    resp = make_response(render_template("kristen.css"))
+    resp.headers['Content-type'] = 'text/css'
+    return resp
 
 @app.route('/kristen/hobbies')
 def kristen_hobbies():

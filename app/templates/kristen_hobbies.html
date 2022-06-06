@@ -18,30 +18,14 @@
             crossorigin="anonymous"
         />
 
-        <link lang='sass' rel="stylesheet" href="./static/styles/kristen.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('css') }}">
 
         <title>{% block title %}Hobbies{% endblock %}</title>
     </head>
 
     <body>
-        <!-- creating the navigation bar and routing it to each fellow's webpage-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbar"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+        {% include 'nav.html' %}
 
-            <div class="collapse navbar-collapse" id="navbar">
-                <a class="nav-item nav-link" id="home" href="/">Home</a>
-                <a class="nav-item nav-link" id="kristen" href="/kristen">Kristen</a>
-                <a class="nav-item nav-link" id="helen" href="/helen">Helen</a>
-                <a class="nav-item nav-link" id="catherine" href="/catherine">Catherine</a>
-            </div>
-        </nav>
-
+        <h1>{{ title }}</h1>
     </body>
 </html>
