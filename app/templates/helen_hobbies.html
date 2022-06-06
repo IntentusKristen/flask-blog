@@ -27,7 +27,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-        <link lang='sass' rel="stylesheet" href="./static/styles/helen.css">
+        <link lang='sass' rel="stylesheet" href="../static/styles/helen.css">
+        <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
+
 
         <title>{% block title %}Helen{% endblock %}</title>
 
@@ -39,7 +41,7 @@
             <div class="nav-content">
                 <a href="/">
                     <div class="nav-logo">
-                        <img src="./static/img/logo.svg" />
+                        <img src="../static/img/logo.svg" />
                     </div>
                 </a>
             </div>
@@ -48,7 +50,30 @@
         <!-- using jinja nav template -->
         {% include 'nav.html' %}
 
+         <!-- add profile picture -->
+         <div class="profile">
+			<div id="profile-picture" class="profile-picture">
+				<img src="../static/img/helen.jpg" />
+			</div>
+			<h1 class="mytitle">{{ title }}</h1>
+            <h3> <i>mlh production engineer fellow 22.sum.22</i></h3>
+		</div>
+
+        <!-- include a back link -->
+        <div class="parent">
+            <a href="javascript:history.back()">
+            <button class="button button1">return to profile</button> 
+        </a>
+        </div>
+    
         <!-- include hobbies template -->
-        {% include 'hobbies.html' %}
+        <div class="hobbiestitle"> <h3><b><u>My Hobbies</u></b></h3></div>
+
+
+        <div class="row">
+            {% include 'hobbieshelentemp.html' %}
+        </div>
+        
+        
     </body>
 </html>

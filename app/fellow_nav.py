@@ -85,10 +85,17 @@ def helen():
 @fellow_nav.route('/helen/hobbies')
 def helenhobbies():
     hobby_info = [{
-        'name' : 'Chocolate Milk',
-        'img' : './static/img/hobbietest.jpeg',
-        'desc' : 'I like drinking chocolate milk'
+        'name' : 'Photography',
+        'img' : '../static/img/helenhob1.png',
+        'desc' : 'I like photographing my friends and people! I often like to adjust the picture through editing softwares. \
+         the image above is a screenshot from my photography Instagram account (@hxlens).'
+    },
+    {
+        'name' : 'Drawing',
+        'img' : '../static/img/helenhob2.png',
+        'desc' : 'I like drawing with different mediums. Like in forms of digitial art, paint, pencil and more.'
     }]
+
     return render_template('helen_hobbies.html', nav=nav, title="Helen Xia", url=os.getenv("URL"),hobbies=hobby_info)
 
 @fellow_nav.route('/catherine')
