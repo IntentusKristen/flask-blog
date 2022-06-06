@@ -131,11 +131,13 @@ def catherine():
             'location': 'Fresno, CA',
             'start_date': 'August 2022',
             'end_date': 'Present',
+            'desc': ''
         },{
             'name': 'Sierra Pacific Highschool',
             'location': 'Hanford, CA',
             'start_date': 'August 2018',
             'end_date': 'June 2022',
+            'desc': ''
         }]
 
     nav = [{'name': 'Home', 'url': '/'},

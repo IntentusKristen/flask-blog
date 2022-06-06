@@ -305,7 +305,8 @@ body {
 	position: relative;
 }
 .timeline-item,
-#timeline div {
+#timeline div,
+#timeline.education p {
 	padding-left: 40px;
 	position: relative;
 }
@@ -465,4 +466,23 @@ circle.plot {
 
 		overflow: hidden;
 	}
+}
+
+.education h3 {
+	display: none;
+}
+
+.education i {
+	display: inline-block;
+	min-width: 0px;
+	color: #e0def4;
+	width: 100%;
+}
+
+.education p {
+	color: #e0def4;
+}
+
+.education b {
+	color: #e0def4;
 }
