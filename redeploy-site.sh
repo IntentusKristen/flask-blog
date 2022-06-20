@@ -18,6 +18,4 @@ tmux new -s redeployed_sess
 
 tmux detach
 
-source python3-virtualenv/bin/activate
-
-flask run
+flask run --host=0.0.0.0
