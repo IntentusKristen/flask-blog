@@ -12,8 +12,6 @@ source python3-virtualenv/bin/activate
 
 pip install requirements.txt
 
-tmux new -s redeployed_sess
-
-tmux detach
+tmux new
 
 flask run --host=0.0.0.0
