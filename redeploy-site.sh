@@ -14,8 +14,6 @@ pip install requirements.txt
 
 tmux new -s redeployed_sess
 
-:attach-session -t . -c flask-blog
-
 tmux detach
 
 flask run --host=0.0.0.0
