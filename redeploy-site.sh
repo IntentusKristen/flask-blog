@@ -4,9 +4,9 @@ tmux kill-server
 
 cd flask-blog
 
-tmux new -s redeploy
-
 git fetch && git reset origin/main --hard
+
+tmux new -s redeploy
 
 python -m venv python3-virtualenv
 
