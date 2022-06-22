@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, make_response
 from dotenv import load_dotenv
+from peewee import *
 
 load_dotenv()
 app = Flask(__name__)
