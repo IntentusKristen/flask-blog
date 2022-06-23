@@ -96,5 +96,5 @@ def delete_time_line_post():
 
 @app.route('/timeline')
 def timeline():
-       return render_template('timeline.html', title="Timeline", url=os.getenv("URL"))
+       return render_template('timeline.html', title="Timeline")
           
