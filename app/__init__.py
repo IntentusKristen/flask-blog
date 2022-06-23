@@ -17,7 +17,7 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
              )
 print(mydb)
 
-class TimelinePost(mydb.Model):
+class TimelinePost(Model):
        name = CharField()
        email = CharField()
        content = TextField()
