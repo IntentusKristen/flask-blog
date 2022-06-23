@@ -2,12 +2,11 @@
 from email.policy import default
 import os
 import datetime
-from urllib import request
-from xmlrpc.client import DateTime
 from flask import Flask, render_template, make_response
 from dotenv import load_dotenv
 from peewee import *
 from playhouse.shortcuts import model_to_dict
+from .fellow_nav import fellow_nav
 
 load_dotenv()
 app = Flask(__name__)
