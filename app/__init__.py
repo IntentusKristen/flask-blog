@@ -1,8 +1,7 @@
-
+from dotenv import load_dotenv
 import os
 import datetime
-from flask import Flask, render_template, make_response
-from dotenv import load_dotenv
+from flask import Flask, render_template
 from peewee import *
 from playhouse.shortcuts import model_to_dict
 from .fellow_nav import fellow_nav
