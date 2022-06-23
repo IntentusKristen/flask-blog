@@ -93,4 +93,8 @@ def delete_time_line_post():
        id = request.form['id']
 
        TimelinePost.delete_by_id(id)
+
+@app.route('/timeline')
+def timeline():
+       return render_template('timeline.html', title="Timeline")
           
