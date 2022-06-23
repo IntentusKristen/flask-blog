@@ -1,8 +1,13 @@
+from crypt import methods
+from email.policy import default
 import os
 import datetime
+from urllib import request
+from xmlrpc.client import DateTime
 from flask import Flask, render_template, make_response
 from dotenv import load_dotenv
 from peewee import *
+from playhouse.shortcuts import model_to_dict
 
 load_dotenv()
 app = Flask(__name__)
@@ -14,6 +19,18 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
               port=3306
              )
 print(mydb)
+
+class TimelinePost(Model):
+       name = CharField()
+       email = CharField()
+       content = TextField()
+       created_at = DateTimeField(default=datetime.datetime.now)
+
+       class Meta:
+              database = mydb
+
+mydb.connect()
+mydb.create_tables([TimelinePost])
 
 app.register_blueprint(fellow_nav, url_prefix='/')
 
@@ -54,3 +71,20 @@ def catherine_hobbies():
 def kristen_hobbies():
     return render_template('kristen_hobbies.html', title="My Hobbies", url=os.getenv("URL"))
 
+@app.route('/api/timeline_post', methods=['POST'])
+def post_time_line_post():
+       name = request.form['name']
+       email = request.form['email']
+       content = request.form['content']
+       timeline_post = TimelinePost.create(name=name, email=email, content=content)
+
+       return model_to_dict(timeline_post)
+
+@app.route('/api/timeline_post', methods=['GET'])
+def get_time_line_post():
+       return {
+              'timeline_posts': [
+                     model_to_dict(p)
+                     for p in TimelinePost.select().order_by(TimelinePost.created_at.desc)
+              ]
+       }
