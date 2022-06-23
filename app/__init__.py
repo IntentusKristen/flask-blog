@@ -1,4 +1,5 @@
 import os
+import datetime
 from flask import Flask, render_template, make_response
 from dotenv import load_dotenv
 from peewee import *
@@ -14,16 +15,7 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
              )
 print(mydb)
 
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-       user=os.getenv("MYSQL_USER"),
-       password=os.getenv("MYSQL_PASSWORD"),
-       host=os.getenv("MYSQL_HOST"),
-       port=3306)
-
-print(mydb)
-
 app.register_blueprint(fellow_nav, url_prefix='/')
-
 
 @app.route('/')
 def home():
