@@ -6,16 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            crossorigin="anonymous"
+        />
+
     <link lang='sass' rel="stylesheet" href="./static/styles/kristen.css">
 
     <title>{% block title %}Submit Form{% endblock %}</title>
 </head>
 
 <body>
-    <form id="form">
-        <input name="username" type="text">
-        <input name="password" type="password">
-        <button type="submit">Submit</button>
-    </form>
+    {% include 'nav.html' %}
+    <h1>Timeline</h1>
+    <div class="form-center">
+        <form id="form">
+            <div>
+                <label>Name:</label>
+                <input name="name" type="text">
+            </div>
+
+            <div>
+                <label>Email:</label>
+                <input name="email" type="text">
+            </div>
+
+            <div>
+                <label>Content:</label>
+                <input name="content" type="text">
+            </div>
+
+            <div class="form-center">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <h1>Posts: <span id ='created_at'></span></h1>
+        <script>
+            
+        </script>
+        <p>Date:</p>
+    </div>
 </body>
+
+<script>
+    const form = document.getElementById('form');
+
+    form.addEventListener('submit', function(e){
+        // prevent default behaviour
+        e.preventDefault();
+
+        // create a new FormData object
+        const formData = new FormData(form)
+        // convert formData object to URL-encoded string
+        const payload = new URLSearchParams(formData)
+
+        console.log([...payload])
+
+        // post the payload using fetch
+        fetch('/api/timeline_post',{
+            method: "POST",
+            body: payload,
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+    })
+</script>
 </html>

@@ -89,7 +89,7 @@ def get_time_line_post():
        }
 
 @app.route('/api/timeline_post', methods=['DELETE'])
-def delete_time_line_post():
+def delete_time_line_post(id):
        id = request.form['id']
 
        TimelinePost.delete_by_id(id)
