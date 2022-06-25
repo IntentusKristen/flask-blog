@@ -11,10 +11,29 @@ body {
     margin: 0px;
 }
 
+form {
+    display: table;
+    align-items: center;
+}
+
+.form-center {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+}
+
 p {
     font-family: "Lucidia Console", monospace;
     text-align: justify;
     margin-left: 300px;
+    display: table-row;
 }
 
 .nav-bar {
