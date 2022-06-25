@@ -48,38 +48,26 @@
             </div>
         </form>
     </div>
-
-    <div>
-        <h1>Posts: <span id ='created_at'></span></h1>
-        <script>
-            
-        </script>
-        <p>Date:</p>
-    </div>
-</body>
+    {% include 'post_req.html' %}
+    </body>
 
 <script>
-    const form = document.getElementById('form');
+    const form = document.getElementById("form");
+    form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const payload = new FormData(form);
+    console.log([...payload]);
 
-    form.addEventListener('submit', function(e){
-        // prevent default behaviour
-        e.preventDefault();
-
-        // create a new FormData object
-        const formData = new FormData(form)
-        // convert formData object to URL-encoded string
-        const payload = new URLSearchParams(formData)
-
-        console.log([...payload])
-
-        // post the payload using fetch
-        fetch('/api/timeline_post',{
-            method: "POST",
-            body: payload,
-        })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err))
+    fetch("/api/timeline_post", {
+      method: "POST",
+      body: payload,
     })
+      .then((res) => res.json())
+      .then((data) => {
+        (data) => console.log(data);
+      })
+      .catch((err) => console.log(err));
+  });
+
 </script>
 </html>
