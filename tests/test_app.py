@@ -27,6 +27,8 @@ class AppTestCase(unittest.TestCase):
         json = response.get_json()
         assert "timeline_posts" in json
         assert len(json["timeline_posts"]) == 0
+
+        # response = self.client.post("/api/timeline_post", data={"email": "john@example.com", "content": "Hello world, I'm John!",})
     
     def test_malformed_timeline_post(self):
         response = self.client.post("/api/timeline_post", data={"email": "john@example.com", "content": "Hello world, I'm John!",})
