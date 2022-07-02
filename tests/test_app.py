@@ -13,6 +13,7 @@ class AppTestCase(unittest.TestCase):
         assert response.status_code == 200 
         html = response.get_data(as_text=True)
         assert "<title>MLH Fellow</title>" in html
+
         # add more stuff to test
     
     def test_timeline(self):
