@@ -12,7 +12,7 @@ load_dotenv()
 app = Flask(__name__)
 
 
-if os.getenv("Testing") == "true":
+if os.getenv("TESTING") == "true":
        print("Running in test mode")
        mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
 else:
