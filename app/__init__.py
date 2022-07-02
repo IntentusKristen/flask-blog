@@ -46,7 +46,7 @@ def home():
            {'name': 'Kristen', 'url': '/kristen'},
            {'name': 'Helen', 'url': '/helen'},
            {'name': 'Catherine', 'url': '/catherine'}]
-    return render_template('home.html', nav=nav, title="MLH Fellow Orientation Hack", url=os.getenv("URL"))
+    return render_template('home.html', nav=nav, title="MLH Fellow", url=os.getenv("URL"))
 
 @app.route('/catherine/hobbies')
 def catherine_hobbies():
