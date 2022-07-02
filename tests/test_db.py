@@ -31,4 +31,8 @@ class TestTimelinePost(unittest.TestCase):
             content='Hello World, I\'m John!'
         )
         assert second_post.id == 2
-
+        
+        for post in TimelinePost.select():
+            self.assertEqual(post.name, 'John Doe')
+            self.assertEqual(post.email, 'john@example.com')
+            self.assertEqual(post.content, 'Hello World, I\'m John!')
