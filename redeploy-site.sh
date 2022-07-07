@@ -4,13 +4,6 @@ cd /root/flask-blog
 
 git fetch && git reset origin/main --hard
 
-python -m venv python3-virtualenv
+docker compose -f docker-compose.prod.yml down
 
-source python3-virtualenv/bin/activate
-
-pip install -r requirements.txt
-
-cd /etc/systemd/system
-
-systemctl daemon-reload
-systemctl restart myportfolio
+docker compose -f docker-compose.prod.yml up -d --build
