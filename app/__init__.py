@@ -11,12 +11,18 @@ from .fellow_nav import fellow_nav
 load_dotenv()
 app = Flask(__name__)
 
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+
+if os.getenv("TESTING") == "true":
+       print("Running in test mode")
+       mydb = SqliteDatabase('file:memory?mode=memory&cache=shared', uri=True)
+else:
+       mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
               user=os.getenv("MYSQL_USER"),
               password=os.getenv("MYSQL_PASSWORD"),
               host=os.getenv("MYSQL_HOST"),
               port=3306
-             )
+              )       
+
 print(mydb)
 
 class TimelinePost(Model):
@@ -40,7 +46,7 @@ def home():
            {'name': 'Kristen', 'url': '/kristen'},
            {'name': 'Helen', 'url': '/helen'},
            {'name': 'Catherine', 'url': '/catherine'}]
-    return render_template('home.html', nav=nav, title="MLH Fellow Orientation Hack", url=os.getenv("URL"))
+    return render_template('home.html', nav=nav, title="MLH Fellow", url=os.getenv("URL"))
 
 @app.route('/catherine/hobbies')
 def catherine_hobbies():
@@ -72,9 +78,21 @@ def kristen_hobbies():
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
+
+       if (not 'name' in request.form):
+              return "Invalid name", 400
+       
+       content = request.form['content']
+       if (content == ''):
+              return "Invalid content", 400
+       
        name = request.form['name']
        email = request.form['email']
-       content = request.form['content']
+
+       if "@" not in email:
+              return "Invalid email", 400
+
+       
        timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
        return model_to_dict(timeline_post)
