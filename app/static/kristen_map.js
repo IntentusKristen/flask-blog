@@ -46,16 +46,22 @@ $(function () {
 				tooltip: { content: "GuangXi, China" },
 			},
 
-			ontario: {
+			london: {
 				latitude: 42.986897,
 				longitude: -81.246216,
 				tooltip: { content: "London, Ontario" },
 			},
 
+			toronto: {
+				latitude: 43.6532,
+				longitude: 79.3832,
+				tooltip: { content: "Toronto, Ontario" },
+			},
+
 		},
 		// Links allow you to connect plots between them
 		links: {
-			guangxiontario: {
+			guangxihunan: {
 				// ... Or with IDs of plotted points
 				factor: -0.6,
 				between: ["guangxi", "hunan"],
@@ -64,10 +70,19 @@ $(function () {
 				},
 			},
 
-			hunanontario: {
+			hunanlondon: {
 				// ... Or with IDs of plotted points
 				factor: -0.6,
-				between: ["hunan", "ontario"],
+				between: ["hunan", "london"],
+				attrs: {
+					"stroke-width": 2,
+				},
+			},
+
+			torontolondon: {
+				// ... Or with IDs of plotted points
+				factor: -0.6,
+				between: ["toronto", "london"],
 				attrs: {
 					"stroke-width": 2,
 				},
