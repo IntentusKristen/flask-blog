@@ -54,7 +54,7 @@ $(function () {
 
 			toronto: {
 				latitude: 43.6532,
-				longitude: 79.3832,
+				longitude: -79.3832,
 				tooltip: { content: "Toronto, Ontario" },
 			},
 
